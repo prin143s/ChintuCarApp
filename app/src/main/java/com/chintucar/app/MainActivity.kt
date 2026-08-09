@@ -68,7 +68,10 @@ fun CarScreen(connect:((Boolean)->Unit)->Unit,send:(String)->Unit){
   send(c)
  }
  MaterialTheme{
-  Surface(Modifier.fillMaxSize(),Color(0xFFF5F7FB)){
+  Surface(
+    modifier = Modifier.fillMaxSize(),
+    color = Color(0xFFF5F7FB)
+) {
    Column(Modifier.fillMaxSize().padding(16.dp),horizontalAlignment=Alignment.CenterHorizontally){
     Text("🚗 CHINTU CAR",fontSize=28.sp,fontWeight=FontWeight.Bold)
     Text(if(online)"🟢 CAR CONNECTED" else "🔴 CAR DISCONNECTED",fontWeight=FontWeight.Bold)
